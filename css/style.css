@@ -145,9 +145,9 @@ address ul a:hover,
   align-items: center;
   background-color: var(--dark);
   text-align: center;
-  min-height: 600px;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 188px 0;
 }
 .hero-heading {
   color: var(--white);
@@ -155,9 +155,10 @@ address ul a:hover,
   letter-spacing: 0.02em;
   line-height: 1.07;
   margin-bottom: 48px;
-  max-width: 500px;
+  max-width: 496px;
 }
 .primary-button {
+  display: block;
   background-color: var(--primary);
   border: none;
   color: var(--white);
@@ -165,6 +166,10 @@ address ul a:hover,
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 16px 32px;
+  margin: 0 auto;
+  min-width: 169px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .primary-button:hover,
 .primary-button:focus,
