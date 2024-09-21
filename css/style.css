@@ -1,3 +1,4 @@
+/* START General styles */
 :root {
   --primary: #4d5ae5;
   --dark: #2e2f42;
@@ -10,11 +11,9 @@
   --font-size-default: 16px;
   --font-weight-medium: 500;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   color: var(--text);
   background-color: var(--white);
@@ -22,8 +21,8 @@ body {
   font-size: var(--font-size-default);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  box-sizing: border-box;
 }
-
 h1,
 h2,
 h3,
@@ -33,81 +32,83 @@ h6,
 p {
   margin: 0;
 }
-
 a {
   color: var(--white);
   text-decoration: none;
 }
-
-
-header {
-  background-color: var(--accent);
-  justify-content: space-between;
-}
-
-
-
-header a {
-  color: var(--dark);
-}
-
-footer {
-  background-color: var(--dark);
-  color: var(--light);
-}
-
-
 ul {
   margin: 0;
+  padding: 0;
 }
-
 li {
   list-style-type: none;
 }
-
-address {
-  font-style: normal;
+img {
+  display: block;
+  max-width: 100%;
 }
-
-address ul li {
-  margin-left: 40px;
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
+.section {
+  padding: 120px 0;
+}
+/* END General styles */
 
-
-
+/* START Header styles */
+.header {
+  border-bottom: 1px solid var(--accent);
+}
+.header .container {
+  display: flex;
+}
+.main-navigation {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  flex-grow: 1;
+}
 .main-navigation ul {
-  margin-left: 76px;
+  display: flex;
 }
-
-.main-navigation ul li {
+.main-navigation ul li:not(:last-child) {
   margin-right: 40px;
 }
-
 .main-navigation ul a {
   font-weight: var(--font-weight-medium);
+  display: block;
+  padding: 24px 0;
 }
-
-
 .nav-link {
-    color: var(--dark);
+  color: var(--dark);
 }
-
+.nav-contacts {
+  font-style: normal;
+}
+.nav-contacts ul {
+  display: flex;
+  align-items: center;
+}
+.nav-contacts ul li:not(:last-child) {
+  margin-right: 40px;
+}
 .contact-link {
-    color: var(--text);
+  color: var(--text);
+  display: block;
+  padding: 24px 0;
 }
-
 .nav-link:active,
 .nav-link:focus,
 .contact-link:active,
 .contact-link:focus {
   color: var(--pressed);
 }
-
 address ul a:hover,
 .main-navigation ul a:hover {
   color: var(--pressed);
 }
-
 .logo {
   color: var(--primary);
   font-family: "Raleway", sans-serif;
@@ -117,21 +118,25 @@ address ul a:hover,
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
 .logo .dark {
   color: var(--dark);
 }
-
 .logo .light {
   color: var(--light);
 }
+/* END Header styles */
 
+/* START Hero styles */
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--dark);
   text-align: center;
   min-height: 600px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-
 .hero-heading {
   color: var(--white);
   font-size: 56px;
@@ -140,7 +145,6 @@ address ul a:hover,
   margin-bottom: 48px;
   max-width: 500px;
 }
-
 .primary-button {
   background-color: var(--primary);
   border: none;
@@ -148,15 +152,21 @@ address ul a:hover,
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
   letter-spacing: 0.04em;
+  padding: 16px 32px;
 }
-
 .primary-button:hover,
 .primary-button:focus,
 .primary-button:active {
   background-color: var(--pressed);
   cursor: pointer;
 }
+/* END Hero styles */
 
+/* START Principles section styles */
+.principles ul {
+  display: flex;
+  gap: 24px;
+}
 .section-header {
   color: var(--dark);
   font-size: 36px;
@@ -166,7 +176,6 @@ address ul a:hover,
   text-align: center;
   text-transform: capitalize;
 }
-
 .block-header {
   color: var(--dark);
   font-size: 20px;
@@ -175,39 +184,53 @@ address ul a:hover,
   margin-bottom: 8px;
   letter-spacing: 0.02em;
 }
-
-
-
 .principles li {
   max-width: 264px;
 }
+/* END Principles section styles */
 
+/* START Team section styles */
 .team {
   background-color: var(--light);
 }
-
-
-.team li {
+.team ul {
+  display: flex;
+  gap: 24px;
+}
+.team-card {
   background-color: var(--white);
   text-align: center;
+  padding-bottom: 32px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
 }
-
-.team img {
+.team-card img {
   margin-bottom: 32px;
 }
+/* END Team section styles */
 
-
-
-.portfolio div {
+/* START Portfolio section styles */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+.portfolio-card-content {
   border: 1px solid var(--accent);
-  border-top: none;
+  border-top: 0;
+  padding: 32px 16px;
 }
+/* END Portfolio section styles */
 
-.portfolio li:first-child div {
-  margin-bottom: 48px;
+/* START Footer styles */
+.footer {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 100px 0;
 }
-
-footer p {
+.footer .text {
   margin-top: var(--font-size-default);
   max-width: 264px;
 }
+/* END Footer styles */
